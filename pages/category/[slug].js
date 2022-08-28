@@ -11,7 +11,7 @@ export default function CategoryProductPage() {
 
   const categoryProductFetcher = async () => {
     const res = await fetch(
-      ` http://localhost:3000/api/productsApi/getCategoryProductApi?slug=${slug}`
+      `${process.env.NEXT_PUBLIC_URL}/api/productsApi/getCategoryProductApi?slug=${slug}`
     );
     const data = res.json();
     return data;

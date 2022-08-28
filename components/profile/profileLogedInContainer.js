@@ -10,7 +10,7 @@ export default function ProfileLogedInContainer({ setUser, user, Logout }) {
 
   const userOrderFetcher = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/userOrder?userId=${user.id}`
+      `${process.env.NEXT_PUBLIC_URL}/api/userOrder?userId=${user.id}`
     );
     const data = res.json();
     return data;
