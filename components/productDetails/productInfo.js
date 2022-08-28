@@ -106,7 +106,7 @@ export default function ProductInfo({
         {/* description */}
         <p className=" tracking-tighter font-medium">{description}</p>
         <hr />
-        <div className="flex gap-x-5 self-start">
+        <div className="flex gap-x-5 self-start flex-wrap">
           <PayBtn totalPrice={priceD} />
           {cartItem ? (
             <Link href="/cart">

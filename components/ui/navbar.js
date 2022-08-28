@@ -33,10 +33,6 @@ export default function Navbar({ setSearchModal }) {
       Icons: ShoppingCartIcon,
       cart: true,
     },
-    {
-      href: "/admin/manage-product",
-      Icons: ArchiveBoxIcon,
-    },
   ];
 
   function CartNo() {
