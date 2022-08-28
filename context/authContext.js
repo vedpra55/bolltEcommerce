@@ -27,7 +27,7 @@ export function AuthStateContext({ children }) {
 
   const userFetcher = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/userApi?id=${sessionUser.id}`
+      `${process.env.NEXT_PUBLIC_URL}/api/userApi?id=${sessionUser.id}`
     );
     const data = res.json();
     return data;
