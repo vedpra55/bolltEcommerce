@@ -6,7 +6,7 @@ import {
 
 import Image from "next/image";
 import { discountPrice } from "../../lib/helper";
-import PriceInfo from "./PriceInfo";
+import PriceInfo from "./priceInfo";
 import Link from "next/link";
 import { useCart } from "react-use-cart";
 import toast from "react-hot-toast";

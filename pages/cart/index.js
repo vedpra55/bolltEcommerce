@@ -1,6 +1,6 @@
 import { useCart } from "react-use-cart";
 import CardProductCard from "../../components/cart/cardProductCard";
-import PriceInfo from "../../components/cart/PriceInfo";
+import PriceInfo from "../../components/cart/priceInfo";
 import { discountPrice } from "../../lib/helper";
 import Link from "next/link";
 import { useAuth } from "../../context/authContext";
