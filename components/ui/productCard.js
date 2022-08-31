@@ -13,7 +13,7 @@ export default function ProductCard({ setModalOpen, item, index, setIndex }) {
 
   const router = useRouter();
 
-  const mobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const mobile = useMediaQuery({ query: "(max-width: 1000px)" });
 
   return (
     <div

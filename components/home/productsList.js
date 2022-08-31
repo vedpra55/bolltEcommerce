@@ -22,7 +22,7 @@ export default function ProductsList({ products, attributeOpt, heading }) {
           </button>
         </Link>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {products?.map((item, i) => (
           <ProductCard
             index={i}

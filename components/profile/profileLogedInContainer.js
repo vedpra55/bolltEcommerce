@@ -102,9 +102,9 @@ export default function ProfileLogedInContainer({ setUser, user, Logout }) {
         <h2 className="text-3xl font-bold">Welcome {user.name}</h2>
         <Button text={"Sign Out"} handleClick={Logout} />
       </div>
-      <div className="grid grid-cols-1 gap-y-5  md:grid-cols-3 gap-x-5">
+      <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-3 gap-x-5">
         {tabs.map((tab, i) => (
-          <div key={i} className="bg-gray-100  h-56 rounded-md px-5 py-5">
+          <div key={i} className="bg-gray-100  h-auto rounded-md px-5 py-5">
             <div className="flex justify-between">
               <h4 className="text-xl font-medium">{tab.name}</h4>
               <button

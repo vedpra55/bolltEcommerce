@@ -18,7 +18,7 @@ export default function SectionDetails({ products, section }) {
   const [sortProducts, setSortProducts] = useState(null);
 
   const sortOptions = ["A-Z", "Z-A", "PRICE↑", "PRICE↓"];
-  const mobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const mobile = useMediaQuery({ query: "(max-width: 1100px)" });
 
   useEffect(() => {
     setSortIndex(3);
@@ -79,7 +79,7 @@ export default function SectionDetails({ products, section }) {
         </div>
         {/* Options */}
         <ShowOptions />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mt-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mt-5">
           {sortProducts?.map((item, i) => (
             <ProductCard
               index={i}
