@@ -4,26 +4,23 @@ export default function FilterProductsList({
   newProducts,
   bestSellerProducts,
   ourPickProducts,
-  setOpenModal,
-  isOpenModal,
 }) {
   return (
     <div>
       <ProductsList
-        setOpenModal={setOpenModal}
-        products={newProducts}
+        products={newProducts[0] ? newProducts : newProducts.data}
         heading="New"
         attributeOpt="New"
       />
       <ProductsList
-        setOpenModal={setOpenModal}
-        products={bestSellerProducts}
+        products={
+          bestSellerProducts[0] ? bestSellerProducts : bestSellerProducts.data
+        }
         heading="Best Seller"
         attributeOpt="Best Seller"
       />
       <ProductsList
-        setOpenModal={setOpenModal}
-        products={ourPickProducts}
+        products={ourPickProducts[0] ? ourPickProducts : ourPickProducts.data}
         heading="Our Pick"
         attributeOpt="Our Pick"
       />
