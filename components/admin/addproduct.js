@@ -6,7 +6,6 @@ export default function Addproduct({ category }) {
 
   async function handleForm(data) {
     await handleAddProduct(data);
-    window.location.reload();
   }
 
   return (
