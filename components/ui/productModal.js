@@ -12,7 +12,6 @@ import Button from "./button";
 import { useCart } from "react-use-cart";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { PayBtn } from "./PayBtn";
 
 export default function ProductModal({ isOpen, setOpen, item }) {
   const { getItem, addItem } = useCart();
@@ -70,7 +69,7 @@ export default function ProductModal({ isOpen, setOpen, item }) {
           <hr />
           {/* Buttons */}
           <div className="flex gap-x-5 items-center">
-            <PayBtn totalPrice={discountPrice(item.price, item.discount)} />
+            <Button Icon={HeartIcon} text={"Buy Now"} />
             {cartItem ? (
               <Link href="/cart">
                 <div>

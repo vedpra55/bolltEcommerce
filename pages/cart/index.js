@@ -4,11 +4,9 @@ import PriceInfo from "../../components/cart/priceInfo";
 import { discountPrice } from "../../lib/helper";
 import Link from "next/link";
 import { useAuth } from "../../context/authContext";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import { HeartIcon } from "@heroicons/react/24/outline";
 import Button from "../../components/ui/button";
 import { useEffect, useState } from "react";
-import { PayBtn } from "../../components/ui/PayBtn";
-
 import { useRouter } from "next/router";
 
 export default function CartPage() {
@@ -59,7 +57,7 @@ export default function CartPage() {
                 <PriceInfo name="Total Save" price={savePrice} save total />
               </div>
               <div className=" self-start">
-                <PayBtn totalPrice={totalPrice} type="checkout" />
+                <Button Icon={HeartIcon} text={"Checkout"} />
               </div>
             </div>
             {items.map((item, i) => (

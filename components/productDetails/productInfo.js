@@ -9,7 +9,6 @@ import Button from "../ui/button";
 import { useCart } from "react-use-cart";
 import Link from "next/link";
 import toast from "react-hot-toast";
-import { PayBtn } from "../ui/PayBtn";
 import { useAuth } from "../../context/authContext";
 import { useRouter } from "next/router";
 
@@ -107,7 +106,7 @@ export default function ProductInfo({
         <p className=" tracking-tighter font-medium">{description}</p>
         <hr />
         <div className="flex gap-x-5 self-start flex-wrap gap-y-5">
-          <PayBtn totalPrice={priceD} />
+          <Button Icon={HeartIcon} text={"Buy Now"} />
           {cartItem ? (
             <Link href="/cart">
               <div>
