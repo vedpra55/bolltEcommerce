@@ -32,7 +32,7 @@ export default function Home({
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const categories = await getCategory();
   const newProducts = await getAttributeLimitedProducts("New");
   const bestSellerProducts = await getAttributeLimitedProducts("Best Seller");

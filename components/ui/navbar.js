@@ -66,7 +66,7 @@ export default function Navbar({ setSearchModal }) {
         <div>
           <item.Icons className="h-8 cursor-pointer" />
           {item.profile && hover && (
-            <div className="absolute bg-white shadow-md rounded-md px-1">
+            <div className="absolute right-0 bg-white shadow-md rounded-md px-1">
               <button onClick={Login} className="relative w-48 h-20">
                 <Image
                   priority

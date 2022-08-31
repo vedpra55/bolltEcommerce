@@ -42,6 +42,7 @@ export const handleAddProduct = async (formData) => {
     );
 
   if (error) toast.error(error.message);
+  console.log(error?.message);
 
   if (data) {
     const { publicURL, error } = supabase.storage
@@ -52,17 +53,18 @@ export const handleAddProduct = async (formData) => {
 
     if (publicURL) {
       const { data, error } = await supabase.from("products").insert({
-        name: formData.productName,
-        description: formData.productDescription,
-        price: formData.productPrice,
-        discount: formData.productDiscount,
+        name: formData?.productName,
+        description: formData?.productDescription,
+        price: formData?.productPrice,
+        discount: formData.productDiscount ? formData.productDiscount : 0,
         images: [publicURL],
-        attribute: formData.attribute,
+        attribute: formData?.attribute,
         slug: slugify(formData.productName),
         category: formData.category,
       });
 
       if (error) toast.error(error.message);
+      console.log(error?.message);
       toast.success(`${formData.productName} added sucessfully`);
     }
   }
