@@ -15,7 +15,7 @@ import CategoryList from "../components/home/categoryList";
 import FilterProductsList from "../components/home/filterProductsList";
 
 function SWRFallback() {
-  const { data } = useSWR(
+  const { data: allCategory } = useSWR(
     "/api/productsApi/getAllCategoryApi",
     categoryFetcher
   );
@@ -34,7 +34,9 @@ function SWRFallback() {
 
   return (
     <div>
-      <CategoryList category={data.data} />
+      <CategoryList
+        category={allCategory[0] ? allCategory : allCategory.data}
+      />
       <FilterProductsList
         bestSellerProducts={bestSellerProducts}
         ourPickProducts={ourPickProducts}
@@ -76,5 +78,6 @@ export async function getStaticProps() {
           ourPickProducts,
       },
     },
+    revalidate: 10,
   };
 }
